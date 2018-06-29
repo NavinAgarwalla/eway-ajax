@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const contactinfo = require('./file.js');
 
 
+const app = express();
+app.use(bodyParser.json());
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
 	console.log(`App is listening on port ${PORT}`);});
