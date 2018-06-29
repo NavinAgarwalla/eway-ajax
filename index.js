@@ -3,6 +3,10 @@ const bodyParser = require('body-parser');
 const contactinfo = require('./file.js');
 
 
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+	console.log(`App is listening on port ${PORT}`);});
+
 const memory = req.body.conversation.memory;
     const state= memory.state;
     const district = memory.district;
